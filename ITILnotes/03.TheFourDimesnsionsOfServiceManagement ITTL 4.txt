@@ -1,0 +1,19 @@
+The four dimesnsions of service management ITTL 4
+
+	- to support a holistic approach to service management ITIL 4 reposition the for P's of service management. People, process, products (technology), Partners (suppliers)
+	- they represent persprectives that are critical to efficiently delivering value to stakeholders in the form of products and services
+
+1. Organisations and People 
+	- work to make sure your organisation is structured and managed. That your team's roles and responsibilities and systems of authiority and communication are well-defined, that their capacity, culture and confidence is right to support your objective.
+
+2. Information and technology 
+	- It applies to the information and technology that are a part of services and also the IT used to manage those services.
+	- For services, this includes the information created, managed and used during service provision and consumption, and the technologies that support and enable that service. 
+	- For service management, technologies include things like workflow management systems, knowledge bases, inventory systems, communication systems and aanalytical tools. 
+
+3. Partners and Suppliers 
+	- involved in the design, development, deployment, delivery, support and/or continual improvement of services, and incorporates contracts and other aggrements between the organization and it's partners or suppliers.  
+
+4. Value streams and processes 
+	- define the activities, workflows, controls and procedures needed to achieve agreed objectives.
+	- The focus is on what activities the organization undertakes, and how they're organized, as well as how te organization ensures that it is enabling value creation for all stakeholders efficeiently and effectively. 

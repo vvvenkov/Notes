@@ -1,0 +1,42 @@
+ITIL 
+	- ITTL is an IT service management (ITSM) framework.
+	- a set of best practices and techniques for selecting, planning, delivery, maintaning IT services within a business. 
+	- focusing on outcomes, insted of outputs (outcome = the quality of the work; output = checkbox work=done)
+	- helps all organisations deliver IT services, using the most efficient method.
+	- uses the same terminology, to avoid 
+
+IT service = office 365, skype, aws, azure, etc. - technology is the up, right and center. The IT stuff is core to the service. 
+IT enabled service = hairdresser with a booking app, IT is secondary to the core service.
+
+------------------------------------------------------------------
+ITSM = IT Service Management (the management of an IT service)
+		|
+		|
+Provider -> IT Service -> Value -> Outcomes -> Customers 
+--------------------------------------------------------------------
+
+ITIL defines an IT service as a means for a provider of an IT enabled-service to deviler value to stakeholders (stakeholders being primarily the customers who pay the bills for the services. by facilitatins outcomes the want to achieve without having to own the details of specifics of costs and risks. Said another way a good provider presents a lower cost and risk option to you, the customer, than doint it yourself or in comparison to alternatives, and also hides how they handle costs and risks, so you don't have to deal with them. This hiding and handling of the details is also part of the value equation.
+
+
+Who Are the Stakeholders of an IT Service?
+
+-----------------------------------------------------------------------
+					 User
+					 Sponsor
+Provider ITService Value -> Outcomes -> Customer
+Supplier				 Other 
+--------------------------------------------------------------------
+A provider is a stakeholder, as is the customer, the person who defines the requirements for a service and takes responsibility for the outcomes of service consumption. This could be the same or different person that the sponsor, who authorizes budget for service consumption. It's also used to describe an organization or person providing financial or other support for an initiative. Then there is the user, the person who uses the services. There are other stakeholders like shareholders, the society and community at large and charatable organizations.
+
+EVERYONE who has a stake in the value of the service is a STAKEHOLDER. They all want to get a value out of the service, or it's consumption. 
+
+VALUE is the perceived usefulness or importance of something to a stakeholder. So it's important to see that value is in the mind of the stakeholder, which means it involves bot reality and perception. And therefore both must be managed for a service. The value of a service resides in the customer's mind. This means value has a subjective quality in other words, as a service provider to provide value, you have to both good reality and good perception. 
+
+OUTCOME is the result of a stakeholder enabled by one or more outputs.
+
+ITIL is vendor-neutral, that means it's not driven by or intertwind with any particular vendor's product or technologies.
+
+ITIL is intendit to be nonprescriptive, that means it's descriptive, describing what to do and why, and giving you an example of how that may or may not work for your situation.
+- Don't treat examples as prescriptions 
+- it't not the idea to prescribe 100% effective forever practices 
+

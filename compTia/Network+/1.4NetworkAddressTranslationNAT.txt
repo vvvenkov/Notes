@@ -1,0 +1,17 @@
+NAT (Network Address translation)
+    It is estimated there are over 20 billion different devices connected and growing
+    - IPv4 supports around 4.29 billion addresses
+
+    The addresse space for IPv4 is exchausted
+    - there are no available add resses to asign 
+
+    How does it all work?
+    - network address translation
+
+    This isn't the only use of NAT 
+    - NAT is handy in many situations 
+
+Public vs private addresses
+    RFC 1918 private IPv4 addresses
+    
+

@@ -1,0 +1,29 @@
+Six service value chain activities 
+	
+	The ITILv3 service cycle of strategy has been replaced with ITIL4 service value chain.
+----------------------------------------------------------------------------------------------------------------
+ITIL 3 
+	strategy > design > transition > operation > improvement 
+
+ITIL 4 	
+	plan > improve > Engage > Design and transition > obtain and build > deliver and support 
+
+----------------------------------------------------------------------------------------------------------------
+Plan
+	- We all get on the same vision, improve direction and status of all dimensions of service management products, and services. 
+
+Improve 
+	- ensure continual improvement of products, services, and practices across all value chain activities and service management dimensions. 
+
+Engage 
+	- Foster a good understanding of stakeholders needs, transparency, and continual engagement, and good relationships with all stakeholders.
+	- customer and user experience
+
+Design and transition
+	- ensure products and services continually meet stakeholder expectations for quality, costs, and time-to-market. 
+
+Obtain and build
+	- ensure service components are available whe needed and meet agreed specifications.
+
+Deliver and Support 
+	- ensure services are delivered and supported according to agreed specifications and stakeholder's expecations. 

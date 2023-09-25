@@ -1,0 +1,39 @@
+ITTL
+
+Seven guiding principles 
+
+1. Focus on the value 
+	- Everything we do must add value from the stakeholder's perspective.
+	- Relentelss focus on value, eliminate things that don't add value to the stakeholders and amplify things that do
+	
+2. Start where you are
+	- Obserrve directly and fully understand the current state first 
+	- Don't start from scratch 
+
+3. Progress iteratively with Feedback
+	- Don't try to do everything at once
+	- Organise work into smaller, manageable chunks done more often
+	- Use feedback in each iteration to ensure actions are appropriate 
+	- improve on outcome, not output
+
+4. Collaborate and Promote visibillity
+	- work together across boundaries for more buy-in and success
+	- share information and build understanding and truse
+	- make work and consequences visible 
+
+5. Think and Work Holistically
+	= work on the servicem not just it's parts 
+	= Integrate information, technology, organization, people, practises, partners and agreements 
+	- comes from system thinking, a concept that is heavily cited in the Devops community. De-optimize the hole by optimizing parts of the system. Work on the system, not just it's parts.
+
+6. Keep it simple and practical
+	- Eliminate anything that provides no value.
+	- use the minimum number of steps to accomplish objectives
+	- Use outcome-based thinking for practical solutions and results 
+
+7. Optimize and Automate 
+	- use resources, particularly human resources, to best effect 
+	- another DevOps model, focus on automation 
+	- Eliminate anything wasteful
+	- Use technology to achieve whatever it can do
+	- Only use human intervention where it adds value 

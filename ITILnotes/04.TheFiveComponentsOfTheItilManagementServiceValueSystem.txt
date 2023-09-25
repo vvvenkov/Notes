@@ -1,0 +1,27 @@
+For service management to function properly it needs to work as a system. 
+
+SVS - service value system 
+
+
+-----------------------------------------------------------------------------
+				1. Guiding Principles 
+	(key input)		2. Governance 		(key output)
+   Opportunity and demand	3. Service value chain	   Value
+				4. Practices
+				5. Continual improvement
+----------------------------------------------------------------------------- 
+
+1. Guiding Principles
+	- recommendations that can guide an organization in all circumstances regardless of changes in its goals, strategies, type of work or management structure. 
+
+2. Governance 
+	- the means by which an organization is directed and controlled. 
+
+3. Service Value Chain
+	- a set of interconnected activities that an organizations performs to deliver a valuable product or service to its consumers and to facilitate value realization, that means the creation of value. 
+
+4. Practices
+	- sets of organization resources designed for performing work or accomplishing an objective. You could thinkk of them as what you do to achieve and sustain the outcomes associated with the practice over time and through changing circumstances. 
+
+5. Continual improvement 
+	- recurring organizational activity performed at all levels to ensure that an organization's performance to ensure that an organization's performance continually meets stakeholders expectations. 
