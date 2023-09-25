@@ -1,0 +1,18 @@
+Arch Linux install packages from AUR
+
+1.Update system 
+$sudo pacman -Syyu 
+
+2.Install git
+$sudo pacman -S git
+
+3.Install libraries to compile packages
+$sudo pacman -S binutils make gcc pkg-config fakeroot
+
+4.Install basic tools for compiling code:
+$sudo pacman -S base-devel
+
+5.$git clone the repository and $run makepkg -Sri
+
+6.If PGP signatures can not be verrified, run 
+$gpg --recv-key <KEY SIGNATURE> 
