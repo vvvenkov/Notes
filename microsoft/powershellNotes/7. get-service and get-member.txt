@@ -1,0 +1,7 @@
+get-service = a list of results of all the services 
+
+Get-Service | Where-Object {$_.status -eq "stopped"}       -get services that are stopped
+Get-Service | Where-Object {$_.status -eq "running"}        -  -get services that are running 
+
+
+get-service | get-member = methods returns a list of members that can be invoked in the command line

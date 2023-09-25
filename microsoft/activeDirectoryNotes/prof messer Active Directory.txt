@@ -1,0 +1,13 @@
+A database of everything on the network 
+ - computers, user accounts, file shares, groups, and more 
+ foundation of most corporate networks
+
+Manage authentications 
+    - user login usign their AD credentials 
+
+Centralized access control
+    - determine which users can access resources
+
+Comonly used by the help desk 
+    - reset passwords
+    - add and remove accounts 

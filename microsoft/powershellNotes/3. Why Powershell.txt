@@ -1,0 +1,31 @@
+- cmd wasn't enough, so PowerSHell was introduced in 2005 
+
+- Object oriented
+- Rich script Environment
+- Task automation 
+- Interactive Shell
+- Bulk operations               A LANGUAGE, not just a scripting environments 
+
+faster, over multiple servers, without using a GUI 
+Object oriented  
+
+automation = script 
+
+you can create your own aliases 
+
+- command line for system administration 
+- included with windows
+
+PowerShell Basics 
+    - for consisted repeatable tasks 
+    - work with built-in providers
+    - talk to active directory, registry, and WNM, natively 
+    - bridge the gap between previous languages with aliases 
+
+    Built into many products 
+        - Microsoft IT products
+        - VMware
+        - Citrix 
+        - Many more
+
+        ls, dir - do directory listing (also Get-ChildItem) "bridge that gap" aliases 

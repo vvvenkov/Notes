@@ -1,0 +1,15 @@
+Configuring two or more  technologies to create a single seamless enviroment 
+
+shared domain namespace 
+
+unified global address list (GAL)
+
+Free/ busy and calendart sharing between on-premises and Exchange Online.
+
+Centralized control of inbound and outbound mail flow.
+
+Secure mail routing between on-premises and Exchange Online organizations
+
+A single Outlook on the web URL for both the on-premises and Exchange Online organizations.
+
+Move on-premises mailboxes to Exchange Online, and back to on-premise Exchange

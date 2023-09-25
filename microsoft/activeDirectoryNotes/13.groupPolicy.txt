@@ -1,0 +1,7 @@
+A tool used by Sys admins, help desk, etc.
+
+deploy configuration changes
+    - users
+    - computers
+
+Make configuration in group policy ONE time and configure 1000s of computers 

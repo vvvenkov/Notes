@@ -1,0 +1,27 @@
+Connectors help control the flow of email messages to and from your Office 365 organization. Most organizations don't need to use them 
+
+    - support mail flow, relay email
+    - enable mailflow between Office365 and email servers that you have in your on-premises enviroment
+    - Apply securit restrictions or controls to email that's sent between your Office365 organization and business partner or service provider,
+    - relay mail from devices, applications, or other non-mailbox entities in your on-premises enviroment thorugh Office365.
+    - avoid "graylisting" that would otherwise occur dur to the large volume of mail that's regularly sent between Microsoft 365 o
+    rganization and your on-premises enviroment or partners. (graylisting is a delay tactic that protects email systems from spam.
+    graylisting slowls down suspiciously large amounts of email by throttling the message sources based on their IP addressses.)
+
+
+    set up alerts for when sometihng happens like "Reply all" - "reply all storm"
+
+    mail loop - An email loop is an unwanted chain reaction which can occur during email communication where two or more mail servers
+    keep sending each other messages indefinitely. Usually it is caused by misconfigured servers, but there can also be other factors 
+    involved that will be covered below. Every time a machine with pre-configured email answering receives an email message, it sends an 
+    automatic reply to the sender. However, if the sender also possesses this feature, an endless loop is created between these two machines
+    that will continue to send each other automatic replies indefinitely.
+
+    typically it starts when OFfice 365 thinks a recipient doesn't exit in the service
+    
+    
+    slow mail flow rule - Inefficient mail flow rules (also known as transport rules) can lead to maiul flow delays for your organization. 
+    - conditions that use ls member of for large groups
+    - conditions that use complex regular expression (regex) pattern matching.
+    - conditions that use content checking in attachments 
+    

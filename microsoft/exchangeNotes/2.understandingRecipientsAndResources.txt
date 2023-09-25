@@ -1,0 +1,26 @@
+recipient - objects in the organization that can receive and relay email through the enviroment 
+
+
+Recipient Types 
+
+User mailbox - the traditional type of email account in microsoft exchange (an actual user)
+Shared mailbox - a mailbox that's designed for access by multiple users
+Mail contact - conatins information about a person who's outside of your Exchange Online organization.
+Mail User - (also known as mail-enabled user) is similar to a mail contact in taht it represents a user with an external email address and isvisible 
+in your organization's shared address book and other address lists. Mail users do no not require licesncers in Exchange Online. 
+
+Resource and groups 
+
+room mailbox - a type of resource mailbox that's assigned to a metting location, such as a conference room. auditorium, or training room. Room mailboxes
+can be included as resources in meeting requests.
+
+Equipment mailbox - a type of resource that's assigned to a resource that's not location specific, such as a portable computer, projector, microphone,
+or a company car. Equipment m,ailboxes can be included as resources in meeting requests. 
+
+Groups:
+
+exactly like Active Directory
+
+Distributioin group
+Mail-enabled security group
+Dynamic distribution group 

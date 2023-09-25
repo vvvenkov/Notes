@@ -1,0 +1,33 @@
+Domain name 
+- base URL for all email correspondence and web sites                "find out your name"
+- ex: sandraclassromm.common
+
+Registrar 
+    - where you purchased your domain name, more of a rental            "register your name"
+    - names are owned for a period of time
+    - renew at time of expiration
+
+DNS - Domain Name server 
+    - server that tracks where to find your domain services                 
+    - www                                                           
+    - mail@  - mx records - mail exchanger - all you do is put an IP address of the serve that's handling your mail 
+
+    *steps to host a domain name* 
+
+1. purchase a domain, network solutions, goDaddy etc.
+
+2. Login to Office 365
+    - click domains 
+    - click add a domain
+    - follow the steps 
+    - make note of TXT DNS Entries Required
+3. Login to the Registrar
+    - edit DNS Settings per 365 
+4. Add users and Assign Licenses
+5. Set domain purpose
+6. configure DNS to point to Office 365
+    -  some subscriptions have you host your own DNS
+    - some subscriptions host DNS on Microsoft 365 
+
+    TTL - makes sure the packet doesn't not keep looping and has an end value 
+

@@ -1,0 +1,23 @@
+Server role = AD CS = Active Directory Certificate Services 
+    Certificate Server 
+    PKI - Public Key Infrastructure 
+    CA - certification Authority 
+
+    *These all mean the same*
+
+
+
+Active Directory Certificate Services (AD CS) is an Identity and Access Control 
+security technology that provides customizable services for creating and 
+managing public key certificates used in software security systems that employ public key technologies.
+
+Active Directory Certificate Services (AD CS) is an Identity and Access Control security
+technology that provides customizable services for creating
+ and managing public key certificates used in software security systems that employ public key technologies.
+
+
+ AD CS can also establish certificate trusts, 
+ which are relationships between different certification 
+ authorities (CAs) that validate certificates
+
+ AD CS helps secure communication, authentication, and data protection in an organization's network

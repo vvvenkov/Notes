@@ -1,0 +1,12 @@
+- a domain is a collection of objects, including user accounts, computer accounts and groups
+- a domain serves as a replication boundary
+- a domain provides centralized administration
+- a domain provides centralized authentication
+- a domain is represented by a DNS namespace
+
+A forest is a collection of one or more domains with two-way trust relationship between them
+
+- a forest shares a common Schema
+
+- a tree is a domain with child domain/s
+

@@ -1,0 +1,12 @@
+10.0.0.0 - 10.255.255.255
+172.16.0.0 - 172.31.255.255
+192.168.0.0 - 192.168.255.255
+
+A private IP address is an IP address that's reserved for internal use behind a router or other 
+Network Address Translation (NAT) device, apart from the public.
+These are in contrast to public IP addresses, which are public and can't be used within a home or business network.
+Sometimes a private address is also referred to as a local IP address.
+
+Reserved IP addresses are IP addresses that are not used for communication on the internet, but for special purposes or local networks12. 
+Some examples of reserved IP addresses are 127.0.0.1, which is used for loopback addresses to the local host12, and 10.0.0.0/8, which is used for local communications within a private network2.
+There are several address blocks that are reserved for different scopes and functions2.

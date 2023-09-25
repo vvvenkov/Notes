@@ -1,0 +1,15 @@
+Groups are:
+
+distribution - email group and nothing else, you cannot set permissions to it 
+security - can set permissions for group
+
+scopes:
+
+domain local - domain resources, forest members
+
+global - domain members, forest resources 
+
+universal - best of both worlds
+
+
+usual practice is putting a global group inside a domain local group 

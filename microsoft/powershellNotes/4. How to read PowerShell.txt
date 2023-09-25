@@ -1,0 +1,21 @@
+"natural language"
+
+                                        name               argument string
+  Verb      Noun                          |                   | 
+  get-service                           -name             "*net*"
+    Command                                      Parameter 
+
+
+PowerShell is case-insensitive 
+Bash is not  
+
+
+The piper operator "|" 
+    - output from one command becomes input for the next.
+    - string multiple command together. 
+    - parameter binding is the key. 
+    - "|" routes information to the correct parameters-with very little effort. 
+
+    get-service | out-file c:\services.txt
+
+    - output from get-service is piped to OutFile, which will create a list of services in a text file called services.txt

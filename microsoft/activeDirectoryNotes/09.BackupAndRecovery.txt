@@ -1,0 +1,14 @@
+Non-Authoritative Restore 
+    - restore from hardware or software failure
+    - becomes current using replication from existing domain controllers
+
+Authoritative Restore 
+    - restore deleted objects 
+    - objects will be marked as Authoritative
+
+
+Deleting and restoring objects
+    - deleted objects can be restored through object reanimation
+    - objects can only be restored during the tombstone interval
+    - tombstone interval is 180 days, can be modified using ADSIEDIT utility 
+    - garbage collection permanently deletes objects 

@@ -1,0 +1,11 @@
+for administrators, roles provide a means of assigning administrative priveleges in your Azure/ Microsoft 365 enviroment.
+
+roles provide a way to see exactly what right are being assigned to a user or group
+
+identities can be assigned myltiple roles
+
+princple of least privilege
+
+- give out the least amount of rights, but still provide users the ability to do their job
+- microsoft always encourgae this principle
+- mixed with privileged identity management, you can also achive "just in tine" administation using roles  
