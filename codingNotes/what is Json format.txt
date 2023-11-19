@@ -1,0 +1,10 @@
+JSON is an open standard used by all technologies to exchange data between browser and server
+
+
+JSON - Java Script Object Notation
+
+- a lightweight format compared to XML
+
+- JavaScript has built-in functions to parse JSON so it's easy to use
+
+- JSON uses human-readeble text to transmit data

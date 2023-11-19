@@ -1,27 +1,15 @@
+Go to settings/ search for JSON settings and replace with this:
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 {
-
     "launch": {
-
-        
-
         "configurations": [
-
             {
-
                 "type": "node",
-
                 "request": "launch",
-
                 "name": "Launch Program",
-
                 "program": "${file}"
-
             }
-
         ],
-
         "compounds": []
-
     }
-
 }
