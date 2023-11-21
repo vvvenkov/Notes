@@ -1,0 +1,27 @@
+ Disable the keyring password
+15. This tip should only be relevant when you're being logged into your user account automatically, without having to enter your username and password.
+
+The keyring is the safe in which some web browsers store the passwords for websites you visit. Some email clients, chat clients and remote access clients use the keyring too. Even your file manager might use it, for storing network share passwords.
+
+Note: The keyring does not store your root password or user password! It only stores additional network (internet) related passwords.
+
+The keyring password can be annoying when you use automatic login. Some web browsers invoke it when you want to store website passwords or when you have stored those in the past.
+
+The most secure solution by far, is to simply turn off automatic login for your user account! But if you don't want to do that and if you never store passwords anyway (because you're about to leave the door of the password safe open permanently), this is how to disable the keyring password:
+
+a. First delete the current user keyring. Don't be afraid: you won't remove your root password or your user password, but only your personal user keyring. Note: This will delete all the website passwords you've stored in your web browsers!
+
+Proceed like this:
+
+Launch a terminal window.
+(You can launch a terminal window like this: *Click*)
+
+Use copy/paste to transfer the following command line to the terminal:
+
+rm -v ~/.local/share/keyrings/*.keyring
+
+Press Enter.
+
+b. The next time when you're being prompted for a keyring password, leave the password field blank (simply click Continue and then again Continue, thus agreeing to unsafe storage). That disables the keyring password for good.
+
+c. Let your web browsers wipe any passwords they've stored, and configure them never to offer to store a password agai
