@@ -1,7 +1,14 @@
 Move the Desktop folder
 
     1. Open the file ~/.config/user-dirs.dirs in a text editor
-    2.Change the line XDG_DESKTOP_DIR="$HOME/Desktop" to point to some other location
+  
+1.1 If no present file, that means the directories haven't been added.
+
+$sudo pacman -S xdg-user-dirs.
+
+$xdg-user-dirs-update
+
+  2.Change the line XDG_DESKTOP_DIR="$HOME/Desktop" to point to some other location
     (for example: XDG_DESKTOP_DIR="$HOME/.config/desktop")
         - Do not just remove the line:
           Doing so will make it use the default value ($HOME/Desktop) and you'll end up in the same situation that you are already in :-)

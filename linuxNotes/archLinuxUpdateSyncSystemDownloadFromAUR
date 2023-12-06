@@ -1,4 +1,4 @@
-Arch Linux install packages from AUR
+Arch Linux first things to do and how to isntall stall packages from AUR
 
 1.Update system 
 $sudo pacman -Syyu 
