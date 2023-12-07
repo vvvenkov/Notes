@@ -2,7 +2,7 @@ Move the Desktop folder
 
     1. Open the file ~/.config/user-dirs.dirs in a text editor
   
-1.1 If no present file, that means the directories haven't been added.
+    1.1 If no present file, that means the directories haven't been added.
 
 $sudo pacman -S xdg-user-dirs.
 

@@ -209,11 +209,11 @@ exec --no-startup-id volumeicon $refresh_i3status
 #language selector
 exec --no-startup-id fcitx
 
-bindsym $mod+b exec qutebrowser
+
 bindsym $mod+c exec vscodium
 bindsym $mod+m exec pcmanfm
 bindsym $mod+o exec libreoffice
-bindsym $mod+v exec librewolf
+bindsym $mod+b exec librewolf
 
 default_border pixel
 

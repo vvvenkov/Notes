@@ -1,12 +1,12 @@
-1. go to the kitty exapmle config file and copy it to the i3/.config directory
+1.Go to the kitty exapmle config file in root directory and copy it to the i3/.config directory
 
 $cp /kitty/kitty.conf /.config/i3/kitty
 
-2. Change the setting of the opacity
+2.Change the setting of the opacity
+opacity 0.85
 
-3. Download xcompmgr (composite manager)
+3.Download xcompmgr (composite manager)
 $sudo pacman -S xcompmgr
 
 4.Add to i3 config file
-
-exec xcompmgr -c -f -n
+$exec xcompmgr -c -f -n
