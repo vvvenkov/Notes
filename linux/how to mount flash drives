@@ -4,12 +4,9 @@
 
 2. Create a directory for the flash drive.
 2.1 Best pracite is in the /mnt directory.
-
-
 $sudo mkdir /mnt/usb-backup
 
 3. Mount the removable device to the /mnt/usb-backup directory
-
 $sudo mount /dev/sdb1 /mnt/usb-backup
 
 

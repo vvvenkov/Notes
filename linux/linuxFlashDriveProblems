@@ -1,7 +1,0 @@
-Linux kernel does not support FAT32 file system, you need ti change it to NFTS 
-
-Format it using Windows and choose different file system
-
-OR
-
-Download Gparted and format it to NFTS
