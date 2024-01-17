@@ -1,9 +1,0 @@
-1.Install feh 
-$sudo pacman -S feh
-
-2.Change wallpaper
-$feh --bg-scale <nameOfWallapper>.jpg
-
-3.Go to the cofing file and add the followin:
-
-$exec_always feh --bg-scale /home/user/wallpaper/<nameOfWallpaper>.jpg>
