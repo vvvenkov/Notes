@@ -1,0 +1,171 @@
+# Set font
+set $mod Mod4
+font pango:monospace 9
+
+# i3 startup and lock
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Network Manager applet at startup
+exec --no-startup-id nm-applet
+
+# Close windows
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# Volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+floating_modifier $mod
+
+tiling_drag modifier titlebar
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+#workspace names 
+set $workspace1 "1: Terminal"
+set $workspace2 "2: Browser"
+set $workspace3 "3: File Manager"
+set $workspace4 "4: IDE"
+set $workspace5 "5: Misc."
+# switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number "1: Terminal" 
+bindsym $mod+Shift+2 move container to workspace number "2: Browser"
+bindsym $mod+Shift+3 move container to workspace number "3: File Manager"
+bindsym $mod+Shift+4 move container to workspace number "4: IDE" 
+bindsym $mod+Shift+5 move container to workspace number "5: Misc." 
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exit
+
+bar {
+        status_command i3status
+    colors { 
+
+        background #000000
+        statusline #ffffff
+        separator #666666
+
+        focused_workspace  #888888 #000000 #ffffff
+        active_workspace   #333333 #000000 #ffffff
+        inactive_workspace #333333 #000000 #ffffff
+        urgent_workspace   #ffffff #000000 #ffffff
+        binding_mode       #999999 #000000 #ffffff
+       } 
+}
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #888888 #888888 #ffffff #888888   #888888
+client.focused_inactive #ffffff #5f676a #ffffff #484e50   #333333
+client.unfocused        #ffffff #444444 #888888 #292d2e   #222222
+client.urgent           #999999 #900000 #ffffff #900000   #900000
+client.placeholder      #999999 #999999 #999999 #999999   #999999
+
+client.background       #ffffff
+
+#volume control for system tray
+exec --no-startup-id volumeicon $refresh_i3status
+
+
+mode "resize" {
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 1 px or 1 ppt
+        bindsym j resize grow height 1 px or 1 ppt
+        bindsym k resize shrink height 1 px or 1 ppt
+        bindsym l resize grow width 1 p or 1 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 1 px or 1 ppt
+        bindsym Down resize grow height 1 px or 1 ppt
+        bindsym Up resize shrink height 1 px or 1 ppt
+        bindsym Right resize grow width 1 px or 1 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# Enter resize mode
+bindsym $mod+r mode "resize"
+
+# Set the window borders type
+default_border pixel
+
+# application rules, apps forced to use a certain workspace.
+exec --no-startup-id autotiling
+
+# According to window class, use xprop to find out an application's class.
+assign [class=kitty] $workspace1
+assign [class=LibreWolf] $workspace2
+assign [class=Pcmanfm] $workspace3
+assign [class=VSCodium] $workspace4
+bindsym $mod+Return exec  kitty
+bindsym $mod+d exec --no-startup-id dmenu_run
+exec librewolf
+exec kitty
+exec pcmanfm
+exec vscodium
+
+# Close apps
+bindsym $mod+q kill
+
+# Used software: -------------------------------------------
+
+#lxappereance - theme switcher
+#flameshot - screenshot tool
+#pcmanfm - file manager
+#vscodium - FOSS version of VSCode 
+#librewolf - privacy fork of firefox
+#vim - the OG Text editor
+#kitty - terminal
+#libreoffice-still - FOSS alternative of Microsoft Office
+#dmenu - application launcher for i3
+#telegram desktop - messaging

@@ -1,0 +1,8 @@
+Virtual box - kernel error 1908
+
+$sudo pacman -S archlinux-keyring
+$sudo pacman-key --init
+$sudo pacman-key --populate archlinux
+$sudo pacman-key --refresj-keys (it will take some time)
+$sudo pacman -Syyu 
+$sudo modprobe vboxdrv
