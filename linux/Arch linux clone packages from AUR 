@@ -12,5 +12,5 @@ $sudo pacman -S base-devel
 
 5.$git clone the repository and $run makepkg -Sri
 
-6.If PGP signatures can not be verrified, run 
+6.If PGP signature cannot be verrified, run: 
 $gpg --recv-key <KEY SIGNATURE> 

@@ -1,6 +1,6 @@
 # Set font
 set $mod Mod4
-font pango:monospace 9
+font pango:monospace 11
 
 # i3 startup and lock
 exec --no-startup-id dex --autostart --environment i3
@@ -50,16 +50,15 @@ bindsym $mod+f fullscreen toggle
 
 #workspace names 
 set $workspace1 "1: Terminal"
-set $workspace2 "2: Browser"
-set $workspace3 "3: File Manager"
-set $workspace4 "4: IDE"
-set $workspace5 "5: Misc."
+set $workspace2 "2: Editor"
+set $workspace3 "3: Browser"
+set $workspace4 "4: Files"
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace $workspace5
+bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -68,10 +67,10 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number "1: Terminal" 
-bindsym $mod+Shift+2 move container to workspace number "2: Browser"
-bindsym $mod+Shift+3 move container to workspace number "3: File Manager"
-bindsym $mod+Shift+4 move container to workspace number "4: IDE" 
-bindsym $mod+Shift+5 move container to workspace number "5: Misc." 
+bindsym $mod+Shift+2 move container to workspace number "2: Editor"
+bindsym $mod+Shift+3 move container to workspace number "3: Browser"
+bindsym $mod+Shift+4 move container to workspace number "4: Files" 
+bindsym $mod+Shift+5 move container to workspace number 5
 bindsym $mod+Shift+6 move container to workspace number 6
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
@@ -83,7 +82,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exit
+bindsym $mod+Shift+Delete exit  
 
 bar {
         status_command i3status
@@ -96,7 +95,7 @@ bar {
         focused_workspace  #888888 #000000 #ffffff
         active_workspace   #333333 #000000 #ffffff
         inactive_workspace #333333 #000000 #ffffff
-        urgent_workspace   #ffffff #000000 #ffffff
+        urgent_workspace   #333333 #000000 #ffffff
         binding_mode       #999999 #000000 #ffffff
        } 
 }
@@ -105,7 +104,6 @@ bar {
 client.focused          #888888 #888888 #ffffff #888888   #888888
 client.focused_inactive #ffffff #5f676a #ffffff #484e50   #333333
 client.unfocused        #ffffff #444444 #888888 #292d2e   #222222
-client.urgent           #999999 #900000 #ffffff #900000   #900000
 client.placeholder      #999999 #999999 #999999 #999999   #999999
 
 client.background       #ffffff
@@ -119,7 +117,7 @@ mode "resize" {
         bindsym h resize shrink width 1 px or 1 ppt
         bindsym j resize grow height 1 px or 1 ppt
         bindsym k resize shrink height 1 px or 1 ppt
-        bindsym l resize grow width 1 p or 1 ppt
+        bindsym l resize grow width 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 1 px or 1 ppt
@@ -143,19 +141,21 @@ default_border pixel
 exec --no-startup-id autotiling
 
 # According to window class, use xprop to find out an application's class.
-assign [class=kitty] $workspace1
-assign [class=LibreWolf] $workspace2
-assign [class=Pcmanfm] $workspace3
-assign [class=VSCodium] $workspace4
-bindsym $mod+Return exec  kitty
+assign [class=Alacritty] $workspace1
+assign [class=LibreWolf] $workspace3
+assign [class=Pcmanfm] $workspace4
+assign [class=VSCodium] $workspace2
 bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+Return exec alacritty
 exec librewolf
-exec kitty
+exec alacritty
 exec pcmanfm
 exec vscodium
+exec xban
+exec fcitx5
 
 # Close apps
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 # Used software: -------------------------------------------
 
@@ -169,3 +169,8 @@ bindsym $mod+q kill
 #libreoffice-still - FOSS alternative of Microsoft Office
 #dmenu - application launcher for i3
 #telegram desktop - messaging
+#trash-cli - terminal trash bin client (trash-list- shows the files; trash-empty - clears the trash)
+#xban + #xbanish  - hides the cursor on key press, and unhides on cursor move
+#xinprop-gui - adjust trackpad speed with gui interface
+#bluetuith - terminal client for bluetooth connection
+#ncpamixer- terminal client for pulse audio
