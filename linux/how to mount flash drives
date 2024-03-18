@@ -1,18 +1,8 @@
-- check the list of connected deviced to your computer 
-
 1.$lsblk - check the list of connected deviced to your computer 
 
-2. Create a directory for the flash drive.
-2.1 Best pracite is in the /mnt directory.
-$sudo mkdir /mnt/usb-backup
+2. Mount the removable device to a desired directory (best practice is the /mnt directory)
+$sudo mount /dev/sdb1 /mnt    (most cases)
 
-3. Mount the removable device to the /mnt/usb-backup directory
-$sudo mount /dev/sdb1 /mnt/usb-backup
-
-4. May need to install ntfs-3g so the system can read the ntfs file system type
+-----------------------------
+3. Install ntfs-3g if the file system is ntfs
 $sudo pacman -S ntfs-3g
-
----------------------------------
-4. Unmount 
-
-$sudo unmount
