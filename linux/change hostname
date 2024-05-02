@@ -1,0 +1,2 @@
+sudo hostnamectl - check hostname
+sudo hostnamectl set-hostname <hostname>
