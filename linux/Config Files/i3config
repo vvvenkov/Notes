@@ -50,14 +50,13 @@ bindsym $mod+f fullscreen toggle
 
 #workspace names 
 set $workspace1 "1: Terminal"
-set $workspace2 "2: Editor"
-set $workspace3 "3: Browser"
-set $workspace4 "4: Files"
+set $workspace2 "2: Browser"
+
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -67,15 +66,15 @@ bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number "1: Terminal" 
-bindsym $mod+Shift+2 move container to workspace number "2: Editor"
-bindsym $mod+Shift+3 move container to workspace number "3: Browser"
-bindsym $mod+Shift+4 move container to workspace number "4: Files" 
+bindsym $mod+Shift+2 move container to workspace number "2: Browser"
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 bindsym $mod+Shift+6 move container to workspace number 6
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+0 move container to workspace number 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -111,7 +110,6 @@ client.background       #ffffff
 #volume control for system tray
 exec --no-startup-id volumeicon $refresh_i3status
 
-
 mode "resize" {
         # Pressing down will grow the window’s height.
         bindsym h resize shrink width 1 px or 1 ppt
@@ -141,18 +139,19 @@ default_border pixel
 exec --no-startup-id autotiling
 
 # According to window class, use xprop to find out an application's class.
-assign [class=Alacritty] $workspace1
-assign [class=LibreWolf] $workspace3
-assign [class=Pcmanfm] $workspace4
-assign [class=VSCodium] $workspace2
+assign [class=LibreWolf] $workspace2
+
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Return exec alacritty
 exec librewolf
 exec alacritty
-exec pcmanfm
-exec vscodium
 exec xban
+exec xbanish
 exec fcitx5
+bindsym $mod+o exec libreoffice 
+bindsym $mod+b exec librewolf
+bindsym $mod+c exec vscodium
+bindsym $mod+e exec pcmanfm
 
 # Close apps
 bindsym $mod+Shift+q kill
@@ -165,12 +164,17 @@ bindsym $mod+Shift+q kill
 #vscodium - FOSS version of VSCode 
 #librewolf - privacy fork of firefox
 #vim - the OG Text editor
+#geany - easier to user editor
+#xarchiver - archiver used with PCManFm
 #kitty - terminal
 #libreoffice-still - FOSS alternative of Microsoft Office
 #dmenu - application launcher for i3
 #telegram desktop - messaging
 #trash-cli - terminal trash bin client (trash-list- shows the files; trash-empty - clears the trash)
 #xban + #xbanish  - hides the cursor on key press, and unhides on cursor move
+#xprop - find out the window class of a window
 #xinprop-gui - adjust trackpad speed with gui interface
 #bluetuith - terminal client for bluetooth connection
 #ncpamixer- terminal client for pulse audio
+#keepassxc - password manager
+
