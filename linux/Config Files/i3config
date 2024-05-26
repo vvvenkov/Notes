@@ -1,115 +1,126 @@
-# Set font
+#set font
 set $mod Mod4
-font pango:monospace 11
+font pango:monospace 12
 
-# i3 startup and lock
+#i3 startup and lock
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# Network Manager applet at startup
+#network Manager applet at startup
 exec --no-startup-id nm-applet
 
-# Close windows
+#close windows
 set $refresh_i3status killall -SIGUSR1 i3status
 
-# Volume controls
+#volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-sta11rtup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 floating_modifier $mod
 
+#resize windows by dragging 
 tiling_drag modifier titlebar
 
-# change focus
+#change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
+#alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
+#move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
+#alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# enter fullscreen mode for the focused container
+#enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 #workspace names 
-set $workspace1 "1: Terminal"
-set $workspace2 "2: Browser"
+set $workspace1 1:terminal
+set $workspace2 2:browser
+set $workspace3 3:files
+set $workspace4 4:ide
+set $workspace5 5:misc
+set $workspace8 8:chats
+set $workspace9 9:чушки
+set $workspace10 10:misc
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 1:terminal
+bindsym $mod+2 workspace 2:browser
+bindsym $mod+3 workspace 3:files
+bindsym $mod+4 workspace 4:ide
+bindsym $mod+5 workspace 5:misc
+bindsym $mod+6 workspace 6:misc
+bindsym $mod+7 workspace 7:misc
+bindsym $mod+8 workspace 8:chats
+bindsym $mod+9 workspace 9:чушки
+bindsym $mod+0 workspace 10:misc
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number "1: Terminal" 
-bindsym $mod+Shift+2 move container to workspace number "2: Browser"
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 0
+bindsym $mod+Shift+1 move container to workspace number 1:terminal
+bindsym $mod+Shift+2 move container to workspace number 2:browser
+bindsym $mod+Shift+3 move container to workspace number 3:files
+bindsym $mod+Shift+4 move container to workspace number 4:ide
+bindsym $mod+Shift+5 move container to workspace number 5:misc
+bindsym $mod+Shift+6 move container to workspace number 6:misc
+bindsym $mod+Shift+7 move container to workspace number 7:misc
+bindsym $mod+Shift+8 move container to workspace number 8:chars
+bindsym $mod+Shift+9 move container to workspace number 9:чушки
+bindsym $mod+Shift+0 move container to workspace number 10:misc
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+Delete exit  
 
+bindsym $mod+Shift+Delete exit  
+#status bar, colors and position
 bar {
         status_command i3status
+        position bottom
     colors { 
 
         background #000000
         statusline #ffffff
         separator #666666
 
-        focused_workspace  #888888 #000000 #ffffff
-        active_workspace   #333333 #000000 #ffffff
-        inactive_workspace #333333 #000000 #ffffff
-        urgent_workspace   #333333 #000000 #ffffff
-        binding_mode       #999999 #000000 #ffffff
+        focused_workspace  #000000 #000000 #ffffff
+        active_workspace   #ffffff #000000 #ffffff
+        inactive_workspace #000000 #000000 #888888
+        urgent_workspace   #000000 #000000 #888888
+        binding_mode       #000000 #000000 #ff0000
        } 
 }
 
+#window border config, colors, etc.
 # class                 border  backgr. text    indicator child_border
-client.focused          #888888 #888888 #ffffff #888888   #888888
+client.focused          #40826d #40826d #40826d #40826d   #40826d
 client.focused_inactive #ffffff #5f676a #ffffff #484e50   #333333
 client.unfocused        #ffffff #444444 #888888 #292d2e   #222222
 client.placeholder      #999999 #999999 #999999 #999999   #999999
-
 client.background       #ffffff
 
 #volume control for system tray
 exec --no-startup-id volumeicon $refresh_i3status
 
+#window resize
 mode "resize" {
         # Pressing down will grow the window’s height.
         bindsym h resize shrink width 1 px or 1 ppt
@@ -129,52 +140,71 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# Enter resize mode
+#enter resize mode
 bindsym $mod+r mode "resize"
 
-# Set the window borders type
-default_border pixel
+#set the window borders type and size
+default_border pixel 5
 
-# application rules, apps forced to use a certain workspace.
-exec --no-startup-id autotiling
+#configure px space between windows screen edges.
+gaps inner 10px
+gaps outer 5px
 
-# According to window class, use xprop to find out an application's class.
+
+#application rules, programs forced to use a certain workspace according to window class, use xprop to find the class.
 assign [class=LibreWolf] $workspace2
+assign [class=VSCodium] $workspace4
+assign [class=Geany] $workspace4
+assign [class=Pcmanfm] $workspace3
+assign [class=KeePassXC] $workspace9
+assign [class=TelegramDesktop] $workspace8
+assign [class=zoom] $workspace8
 
+#dmenu launcher 
 bindsym $mod+d exec --no-startup-id dmenu_run
+
+#terminal launcher
 bindsym $mod+Return exec alacritty
+
+#screenshot launcher
+bindsym $mod+Shift+S exec flameshot launcher
+
+#launch on startup
+exec_always autotiling
 exec librewolf
 exec alacritty
 exec xban
 exec xbanish
 exec fcitx5
-bindsym $mod+o exec libreoffice 
-bindsym $mod+b exec librewolf
-bindsym $mod+c exec vscodium
-bindsym $mod+e exec pcmanfm
+exec pcmanfm
+exec keepassxc
 
-# Close apps
+#change background
+exec_always feh --bg-scale Documents/wallpaper.jpg
+
+#kill process
 bindsym $mod+Shift+q kill
 
-# Used software: -------------------------------------------
+#used software: -------------------------------------------
 
 #lxappereance - theme switcher
 #flameshot - screenshot tool
 #pcmanfm - file manager
-#vscodium - FOSS version of VSCode 
+#vscodium - FOSS fork of VSCode 
 #librewolf - privacy fork of firefox
 #vim - the OG Text editor
+#git - github
 #geany - easier to user editor
-#xarchiver - archiver used with PCManFm
-#kitty - terminal
-#libreoffice-still - FOSS alternative of Microsoft Office
+#libreoffice - FOSS alternative of Microsoft Office
 #dmenu - application launcher for i3
 #telegram desktop - messaging
-#trash-cli - terminal trash bin client (trash-list- shows the files; trash-empty - clears the trash)
+#trash-cli - terminal bin client (trash-list- shows the files; trash-empty - clears the trash)
 #xban + #xbanish  - hides the cursor on key press, and unhides on cursor move
 #xprop - find out the window class of a window
-#xinprop-gui - adjust trackpad speed with gui interface
-#bluetuith - terminal client for bluetooth connection
-#ncpamixer- terminal client for pulse audio
+#bluetuith - terminal bluetooth client
+#ncpamixer- terminal audio client 
 #keepassxc - password manager
+#feh - wallpaper set feg bg-scale location of jpg
+
+
 
