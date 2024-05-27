@@ -13,11 +13,13 @@ general {
 
 order += "cpu_temperature 0"
 order += "cpu_usage]"
+order += "wireless _first_"
 order += "memory"
 order += "battery 0"
 order += "battery 1"
 order += "volume master"
 order += "tztime local"
+order += "tzime local2"
 
 volume master {
 	format = "VOL %volume"
@@ -26,6 +28,11 @@ volume master {
 	mixer = "Master"
 	mixer_idx = 0
 } 
+
+wireless _first_ {
+        format_up = "NET%quality %essid"
+        format_down = "W: down"
+}
 
 cpu_usage {
 format = "%usage"
@@ -46,6 +53,9 @@ battery 1{
 }
 
 tztime local {
-        format = "%Y-%m-%d|%H:%M:%S|"
+        format = "%H:%M:%S"
 }
+
+tztime local {
+	format = "%Y-%m-%d|"
 
