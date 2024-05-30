@@ -109,9 +109,9 @@ bar {
        } 
 }
 
-#window border config, colors, etc. (hooker green coloro code)
+#window border config, colors, etc. (*slightly darker hooker green color)
 # class                 border  backgr. text    indicator child_border
-client.focused          #49796b #49796b #ffffff #49796b   #49796b   
+client.focused          #3f6a5d #3f6a5d #3f6a5d #3f6a5d   #3f6a5d   
 client.focused_inactive #ffffff #5f676a #ffffff #484e50   #333333
 client.unfocused        #ffffff #444444 #888888 #292d2e   #222222
 client.placeholder      #999999 #999999 #999999 #999999   #999999
@@ -179,12 +179,12 @@ exec fcitx5
 exec keepassxc
 
 #change background
-exec_always feh --bg-scale northernLights.jpg
+exec_always feh --bg-scale arch.jpg
 
 #kill process
 bindsym $mod+Shift+q kill
 
-#used soft199708095339Ani+ware: -------------------------------------------
+#used software: -------------------------------------------
 
 #lxappereance - theme switcher
 #qt5ct - theme switcher
