@@ -1,6 +1,6 @@
 #set font
 set $mod Mod4
-font pango:monospace 12
+font pango:monospace 11
 
 #i3 startup and lock
 exec --no-startup-id dex --autostart --environment i3
@@ -109,9 +109,9 @@ bar {
        } 
 }
 
-#window border config, colors, etc.
+#window border config, colors, etc. (hooker green coloro code)
 # class                 border  backgr. text    indicator child_border
-client.focused          #40826d #40826d #40826d #40826d   #40826d
+client.focused          #49796b #49796b #ffffff #49796b   #49796b   
 client.focused_inactive #ffffff #5f676a #ffffff #484e50   #333333
 client.unfocused        #ffffff #444444 #888888 #292d2e   #222222
 client.placeholder      #999999 #999999 #999999 #999999   #999999
@@ -144,21 +144,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set the window borders type and size
-default_border pixel 5
+default_border pixel 5 
 
 #configure px space between windows screen edges.
-gaps inner 10px
-gaps outer 5px
-
+gaps inner 20px
+gaps outer 20px
 
 #application rules, programs forced to use a certain workspace according to window class, use xprop to find the class.
-assign [class=LibreWolf] $workspace2
-assign [class=VSCodium] $workspace4
+assign [class=librewolf] $workspace2
+assign [class="code - oss"] $workspace4
 assign [class=Geany] $workspace4
 assign [class=Pcmanfm] $workspace3
 assign [class=KeePassXC] $workspace9
 assign [class=TelegramDesktop] $workspace8
 assign [class=zoom] $workspace8
+assign [class=Viber] $workspace8
 
 #dmenu launcher 
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -176,18 +176,19 @@ exec alacritty
 exec xban
 exec xbanish
 exec fcitx5
-exec pcmanfm
 exec keepassxc
 
 #change background
-exec_always feh --bg-scale Documents/wallpaper.jpg
+exec_always feh --bg-scale northernLights.jpg
 
 #kill process
 bindsym $mod+Shift+q kill
 
-#used software: -------------------------------------------
+#used soft199708095339Ani+ware: -------------------------------------------
 
 #lxappereance - theme switcher
+#qt5ct - theme switcher
+#fcitx5, fcitx5-gtk, fcitx5-rime, fcitx5-qt, fcitx5-configtool, fcitx5-lua - language chooser and dependencies
 #flameshot - screenshot tool
 #pcmanfm - file manager
 #vscodium - FOSS fork of VSCode 
@@ -199,12 +200,9 @@ bindsym $mod+Shift+q kill
 #dmenu - application launcher for i3
 #telegram desktop - messaging
 #trash-cli - terminal bin client (trash-list- shows the files; trash-empty - clears the trash)
-#xban + #xbanish  - hides the cursor on key press, and unhides on cursor move
+#xbanish  - hides the cursor on key press, and unhides on cursor move
 #xprop - find out the window class of a window
 #bluetuith - terminal bluetooth client
 #ncpamixer- terminal audio client 
 #keepassxc - password manager
 #feh - wallpaper set feg bg-scale location of jpg
-
-
-
