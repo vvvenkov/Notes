@@ -19,7 +19,7 @@ order += "battery 0"
 order += "battery 1"
 order += "volume master"
 order += "tztime local"
-order += "tzime local2"
+order += "tztime local2"
 
 volume master {
 	format = "VOL %volume"
@@ -56,6 +56,6 @@ tztime local {
         format = "%H:%M:%S"
 }
 
-tztime local {
+tztime local2 {
 	format = "%Y-%m-%d|"
-
+}
