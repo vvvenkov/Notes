@@ -1,6 +1,6 @@
 #set font
 set $mod Mod4
-font pango:monospace 11
+font pango:monospace 13.1
 
 #i3 startup and lock
 exec --no-startup-id dex --autostart --environment i3
@@ -50,38 +50,38 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 #workspace names 
-set $workspace1 1:terminal
-set $workspace2 2:browser
-set $workspace3 3:files
-set $workspace4 4:ide
-set $workspace5 5:misc
-set $workspace8 8:chats
-set $workspace9 9:чушки
-set $workspace10 10:misc
+set $workspace1 1:TERMINAL
+set $workspace2 2:BROWSER
+set $workspace3 3:FILES
+set $workspace4 4:IDE
+set $workspace5 5:MISC
+set $workspace8 8:CHATS
+set $workspace9 9:MISC
+set $workspace10 10:ЧУШКИ
 
 # switch to workspace
-bindsym $mod+1 workspace 1:terminal
-bindsym $mod+2 workspace 2:browser
-bindsym $mod+3 workspace 3:files
-bindsym $mod+4 workspace 4:ide
-bindsym $mod+5 workspace 5:misc
-bindsym $mod+6 workspace 6:misc
-bindsym $mod+7 workspace 7:misc
-bindsym $mod+8 workspace 8:chats
-bindsym $mod+9 workspace 9:чушки
-bindsym $mod+0 workspace 10:misc
+bindsym $mod+1 workspace 1:TERMINAL
+bindsym $mod+2 workspace 2:BROWSER
+bindsym $mod+3 workspace 3:FILES
+bindsym $mod+4 workspace 4:IDE
+bindsym $mod+5 workspace 5:MISC
+bindsym $mod+6 workspace 6:MISC
+bindsym $mod+7 workspace 7:MISC
+bindsym $mod+8 workspace 8:CHATS
+bindsym $mod+9 workspace 9:MISC
+bindsym $mod+0 workspace 10:ЧУШКИ
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1:terminal
-bindsym $mod+Shift+2 move container to workspace number 2:browser
-bindsym $mod+Shift+3 move container to workspace number 3:files
-bindsym $mod+Shift+4 move container to workspace number 4:ide
-bindsym $mod+Shift+5 move container to workspace number 5:misc
-bindsym $mod+Shift+6 move container to workspace number 6:misc
-bindsym $mod+Shift+7 move container to workspace number 7:misc
-bindsym $mod+Shift+8 move container to workspace number 8:chars
-bindsym $mod+Shift+9 move container to workspace number 9:чушки
-bindsym $mod+Shift+0 move container to workspace number 10:misc
+bindsym $mod+Shift+1 move container to workspace number 1:TERMINAL
+bindsym $mod+Shift+2 move container to workspace number 2:BROWSER
+bindsym $mod+Shift+3 move container to workspace number 3:FILES
+bindsym $mod+Shift+4 move container to workspace number 4:IDE
+bindsym $mod+Shift+5 move container to workspace number 5:MISC
+bindsym $mod+Shift+6 move container to workspace number 6:MISC
+bindsym $mod+Shift+7 move container to workspace number 7:MISC
+bindsym $mod+Shift+8 move container to workspace number 8:CHATS
+bindsym $mod+Shift+9 move container to workspace number 9:MISC
+bindsym $mod+Shift+0 move container to workspace number 10:ЧУШКИ
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -109,9 +109,9 @@ bar {
        } 
 }
 
-#window border config, colors, etc. (*slightly darker hooker green color)
+#window border config, colors, etc.
 # class                 border  backgr. text    indicator child_border
-client.focused          #3f6a5d #3f6a5d #3f6a5d #3f6a5d   #3f6a5d   
+client.focused          #999999 #999999 #ffffff #999999   #999999   
 client.focused_inactive #ffffff #5f676a #ffffff #484e50   #333333
 client.unfocused        #ffffff #444444 #888888 #292d2e   #222222
 client.placeholder      #999999 #999999 #999999 #999999   #999999
@@ -144,21 +144,22 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set the window borders type and size
-default_border pixel 5 
+default_border pixel 1
+
 
 #configure px space between windows screen edges.
-gaps inner 20px
-gaps outer 20px
+gaps inner 0px
+gaps outer 0px
 
 #application rules, programs forced to use a certain workspace according to window class, use xprop to find the class.
-assign [class=librewolf] $workspace2
-assign [class="code - oss"] $workspace4
+assign [class=LibreWolf] $workspace2
+assign [class=VSCodium] $workspace4
 assign [class=Geany] $workspace4
 assign [class=Pcmanfm] $workspace3
-assign [class=KeePassXC] $workspace9
+assign [class=KeePassXC] $workspace10
 assign [class=TelegramDesktop] $workspace8
 assign [class=zoom] $workspace8
-assign [class=Viber] $workspace8
+for_window [class=Alacritty] border none
 
 #dmenu launcher 
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -172,14 +173,12 @@ bindsym $mod+Shift+S exec flameshot launcher
 #launch on startup
 exec_always autotiling
 exec librewolf
-exec alacritty
+exec pcmanfm
+exec alacritty 
 exec xban
 exec xbanish
 exec fcitx5
 exec keepassxc
-
-#change background
-exec_always feh --bg-scale arch.jpg
 
 #kill process
 bindsym $mod+Shift+q kill
@@ -187,22 +186,24 @@ bindsym $mod+Shift+q kill
 #used software: -------------------------------------------
 
 #lxappereance - theme switcher
-#qt5ct - theme switcher
 #fcitx5, fcitx5-gtk, fcitx5-rime, fcitx5-qt, fcitx5-configtool, fcitx5-lua - language chooser and dependencies
 #flameshot - screenshot tool
 #pcmanfm - file manager
+#file-roller - compatible archiver with pcmanfm
 #vscodium - FOSS fork of VSCode 
 #librewolf - privacy fork of firefox
 #vim - the OG Text editor
 #git - github
 #geany - easier to user editor
 #libreoffice - FOSS alternative of Microsoft Office
-#dmenu - application launcher for i3
-#telegram desktop - messaging
-#trash-cli - terminal bin client (trash-list- shows the files; trash-empty - clears the trash)
-#xbanish  - hides the cursor on key press, and unhides on cursor move
-#xprop - find out the window class of a window
+#dmenu - application launcher for i3ng
+#xbanish  - hides the cursor on key press
+#xprop - find info on any window
 #bluetuith - terminal bluetooth client
-#ncpamixer- terminal audio client 
+#pulsemixer- terminal audio mixer
 #keepassxc - password manager
-#feh - wallpaper set feg bg-scale location of jpg
+#feh - wallpaper set feg --bg-scale <locationOfJpg>
+#xdg-user-dirs - configure user dirs, run xdg-user-dirs-update
+#nodejs - JavaScript runtime environment
+#ufw - firewall
+#trash-cli - trash-list, trash-empty
