@@ -1,0 +1,28 @@
+Alex kommer fra Frankrike. Han em fem år. Han reiser med fly fra Paris til Olso. Han reiser sammen med mamma og Dina.
+ Alex snakker med ei dame. Hun er norsk
+
+E: Hei. Jeg heter Emma. Hva heter du?
+
+Alex: Jeg heter Alex.
+
+E: Hvor gammel er du, Alex?
+
+A: Jeg er fem år gammel.
+
+E: Hvor kommer du fra?
+
+A: Jeg kommer fra Paris. Hvor kommer du fra?
+
+E: Jeg kommer fra Oslo.
+
+A: Jeg reiser sammen med mamma og Dina. Vi reiser til pappa. Han bor i Norge. Han venter på oss på Gardermoen.
+
+
+
+vocabulary:
+
+reise - to travel 
+pappa - daddy 
+mamma - mommy 
+dame - lady 
+vente - to wait 
