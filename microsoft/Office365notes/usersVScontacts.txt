@@ -1,9 +1,0 @@
-users: 
-    - can login to Office 365
-    - have an email address(license dependent)
-    - can install MS Office (license dependent)
-    - can use Office Online Apps(license dependent)
-
-Contacts 
-    - similar to address Book, but global
-    - create to share 

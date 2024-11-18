@@ -1,3 +1,0 @@
-get-command - shows all the cmdlets that are available on the system
-
-get-help = learn more about that command 

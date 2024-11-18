@@ -1,7 +1,0 @@
-mailbox recipient - a user account that is able to send and receive email and nothing else 
-groups - primary point is to have a email message send to a group of recipients
-resources - an object that we create or a specific physical resource in organization. example - A conference room
-contacts - an external user, someone that does not exist in our organization, external to our organization but we want him to appear in our list 
-"guest list", 
-shared - recipient that is going to be used by multiple users 
-migration 

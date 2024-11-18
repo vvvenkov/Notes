@@ -1,9 +1,0 @@
-run as administration
-cd\ - move to the root directory of C drive 
-
-get-h = get help (tab auto complete) Get-help
-find more information about commands 
-
-get-help get-service = learn about service or any other thing 
-
-Get-Help Get-Service -online - gets you to the wiki page

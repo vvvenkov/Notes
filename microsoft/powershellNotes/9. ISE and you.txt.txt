@@ -1,6 +1,0 @@
-Integrated Scripting Environment
-- GUI console, front-ended
-
-runs like the regular command prompt 
-
-f5 for run script  n

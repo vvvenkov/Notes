@@ -1,8 +1,0 @@
-RODCs contain a read only, partial replica of the active Directory database
-
-Selected users, computers and groups are replicated to RODCs
-
-Two default groups exist 
-
-- Allowed RODC Password Replication group
-- Denied RODC Password Replication Group 
