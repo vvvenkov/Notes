@@ -1,7 +1,5 @@
 {
     "launch": {
-
-
         "configurations": [
             {
                 "type": "node",
@@ -16,5 +14,4 @@
     "workbench.activityBar.location": "hidden",
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": false
-
 }
