@@ -1,6 +1,6 @@
 #set font
 set $mod Mod4
-font pango:monospace 13.1
+font pango:monospace 10.1
 
 #i3 startup and lock
 exec --no-startup-id dex --autostart --environment i3
@@ -20,7 +20,7 @@ bindsym XF86AudioMicMute exec --no-sta11rtup-id pactl set-source-mute @DEFAULT_S
 floating_modifier $mod
 
 #resize windows by dragging 
-tiling_drag modifier titlebar
+#tiling_drag modifier titlebar
 
 #change focus
 bindsym $mod+h focus left
@@ -50,38 +50,37 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 #workspace names 
-set $workspace1 1:TERMINAL
-set $workspace2 2:BROWSER
-set $workspace3 3:FILES
-set $workspace4 4:IDE
-set $workspace5 5:MISC
-set $workspace8 8:CHATS
-set $workspace9 9:MISC
-set $workspace10 10:ЧУШКИ
+set $workspace1 1:Terminal
+set $workspace2 2:Editor
+set $workspace3 3:Browser
+set $workspace4 4:Files
+set $workspace5 5:Docs
+set $workspace6 6:Docs
+
 
 # switch to workspace
-bindsym $mod+1 workspace 1:TERMINAL
-bindsym $mod+2 workspace 2:BROWSER
-bindsym $mod+3 workspace 3:FILES
-bindsym $mod+4 workspace 4:IDE
-bindsym $mod+5 workspace 5:MISC
-bindsym $mod+6 workspace 6:MISC
+bindsym $mod+1 workspace 1:Terminal
+bindsym $mod+2 workspace 2:Editor
+bindsym $mod+3 workspace 3:Browser
+bindsym $mod+4 workspace 4:Files
+bindsym $mod+5 workspace 5:Docs
+bindsym $mod+6 workspace 6:Docs
 bindsym $mod+7 workspace 7:MISC
 bindsym $mod+8 workspace 8:CHATS
 bindsym $mod+9 workspace 9:MISC
-bindsym $mod+0 workspace 10:ЧУШКИ
+bindsym $mod+0 workspace 10:MISC
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1:TERMINAL
-bindsym $mod+Shift+2 move container to workspace number 2:BROWSER
-bindsym $mod+Shift+3 move container to workspace number 3:FILES
-bindsym $mod+Shift+4 move container to workspace number 4:IDE
-bindsym $mod+Shift+5 move container to workspace number 5:MISC
-bindsym $mod+Shift+6 move container to workspace number 6:MISC
+bindsym $mod+Shift+1 move container to workspace number 1:Terminal
+bindsym $mod+Shift+2 move container to workspace number 2:Editor
+bindsym $mod+Shift+3 move container to workspace number 3:Browser
+bindsym $mod+Shift+4 move container to workspace number 4:Files
+bindsym $mod+Shift+5 move container to workspace number 5:Docs
+bindsym $mod+Shift+6 move container to workspace number 6:Docs
 bindsym $mod+Shift+7 move container to workspace number 7:MISC
-bindsym $mod+Shift+8 move container to workspace number 8:CHATS
+bindsym $mod+Shift+8 move container to workspace number 8:MISC
 bindsym $mod+Shift+9 move container to workspace number 9:MISC
-bindsym $mod+Shift+0 move container to workspace number 10:ЧУШКИ
+bindsym $mod+Shift+0 move container to workspace number 10:MISC
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -148,24 +147,22 @@ default_border pixel 1
 
 
 #configure px space between windows screen edges.
-gaps inner 0px
-gaps outer 0px
+#gaps inner 0px
+#gaps outer 0px
 
 #application rules, programs forced to use a certain workspace according to window class, use xprop to find the class.
-assign [class=LibreWolf] $workspace2
-assign [class=VSCodium] $workspace4
-assign [class=Geany] $workspace4
-assign [class=Pcmanfm] $workspace3
-assign [class=KeePassXC] $workspace10
-assign [class=TelegramDesktop] $workspace8
-assign [class=zoom] $workspace8
-for_window [class=Alacritty] border none
+assign [class=LibreWolf] $workspace3
+assign [class=vscodium] $workspace2
+assign [class=Pcmanfm] $workspace4
+assign [class=libreoffice] $workspace5
+assign [class=libreoffice-writer] $workspace5
+for_window [class=kitty] border none
 
 #dmenu launcher 
 bindsym $mod+d exec --no-startup-id dmenu_run
 
 #terminal launcher
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 #screenshot launcher
 bindsym $mod+Shift+S exec flameshot launcher
@@ -174,11 +171,10 @@ bindsym $mod+Shift+S exec flameshot launcher
 exec_always autotiling
 exec librewolf
 exec pcmanfm
-exec alacritty 
+exec kitty 
 exec xban
 exec xbanish
 exec fcitx5
-exec keepassxc
 
 #kill process
 bindsym $mod+Shift+q kill
@@ -194,7 +190,6 @@ bindsym $mod+Shift+q kill
 #librewolf - privacy fork of firefox
 #vim - the OG Text editor
 #git - github
-#geany - easier to user editor
 #libreoffice - FOSS alternative of Microsoft Office
 #dmenu - application launcher for i3ng
 #xbanish  - hides the cursor on key press
@@ -206,4 +201,4 @@ bindsym $mod+Shift+q kill
 #xdg-user-dirs - configure user dirs, run xdg-user-dirs-update
 #nodejs - JavaScript runtime environment
 #ufw - firewall
-#trash-cli - trash-list, trash-empty
+
