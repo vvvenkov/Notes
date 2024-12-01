@@ -1,0 +1,3 @@
+sudo apt update
+sudo systemctl enable bluetooth
+sudo apt install bluez pulseaudio-module-bluetooth

@@ -1,0 +1,16 @@
+after the installer 
+
+login as root 
+
+install sudo
+add users to sudoers file and visudo
+
+install i3, i3status, dmenu, xorg, xorg-server
+
+reboot
+
+login
+name
+password
+startx (to start the window manager in xorg)
+
