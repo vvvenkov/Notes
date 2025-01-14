@@ -1,18 +1,10 @@
-# i3status configuration file.
-# see "man i3status" for documentation.
-
-# It is important that this file is edited as UTF-8.
-# The following line should contain a sharp s:
-# ß
-# If the above line is not correctly displayed, fix your editor first!
-
 general {
         colors = true
 	interval = 1
 }
 
 order += "cpu_temperature 0"
-order += "cpu_usage]"
+order += "cpu_usage"
 order += "wireless _first_"
 order += "memory"
 order += "battery 0"
@@ -22,15 +14,15 @@ order += "tztime local"
 order += "tztime local2"
 
 volume master {
-	format = "VOL %volume"
-	format_muted = "VOL Muted"
+	format = "Vol %volume"
+	format_muted = "Vol Muted"
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
 } 
 
 wireless _first_ {
-        format_up = "NET%quality %essid"
+        format_up = "w: up%quality"
         format_down = "W: down"
 }
 
@@ -38,18 +30,18 @@ cpu_usage {
 format = "%usage"
 }
 memory {
-        format = "RAM %used"
+        format = "Mem %used"
 }
 
 cpu_temperature 0 {
-	format = "|CPU %degrees°"
+	format = "Cpu %degrees°"
 }
 
 battery 0{
-	format = "BAT 1 %percentage"
+	format = "Bat %percentage"
 } 
 battery 1{
-	format = "BAT 2 %percentage"
+	format = "Bat %percentage"
 }
 
 tztime local {
@@ -57,5 +49,5 @@ tztime local {
 }
 
 tztime local2 {
-	format = "%Y-%m-%d|"
+	format = "%d-%m-%Y"
 }

@@ -1,16 +1,24 @@
 #set font
 set $mod Mod4
-font pango:monospace 10.1
+font pango:monospace 11.4
 
 #i3 startup and lock
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-#network Manager applet at startup
-exec --no-startup-id nm-applet
+exec --no-startup-id xsecurelock-transfer-sleep-lock --xsecurelock--nofork
 
 #close windows
 set $refresh_i3status killall -SIGUSR1 i3status
+
+#keyboards
+exec --no-startup-id setxkbmap us
+bindsym $mod+Shift+space exec setxkbmap -layout us
+bindsym $mod+Shift+n exec setxkbmap -layout no
+bindsym $mod+Shift+b exec setxkbmap -layout bg phonetic
+
+# Increase brightness by 10%
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
+# Decrease brightness by 10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 
 #volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -18,9 +26,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-sta11rtup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 floating_modifier $mod
-
-#resize windows by dragging 
-#tiling_drag modifier titlebar
 
 #change focus
 bindsym $mod+h focus left
@@ -50,50 +55,48 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+f fullscreen toggle
 
 #workspace names 
-set $workspace1 1:Terminal
-set $workspace2 2:Editor
-set $workspace3 3:Browser
-set $workspace4 4:Files
-set $workspace5 5:Docs
-set $workspace6 6:Docs
-
+set $workspace1 1:terminal
+set $workspace2 2:editor
+set $workspace3 3:browser
+set $workspace4 4:files
+set $workspace8 8:qbit
+set $workspace9 9:keepAss
 
 # switch to workspace
-bindsym $mod+1 workspace 1:Terminal
-bindsym $mod+2 workspace 2:Editor
-bindsym $mod+3 workspace 3:Browser
-bindsym $mod+4 workspace 4:Files
-bindsym $mod+5 workspace 5:Docs
-bindsym $mod+6 workspace 6:Docs
-bindsym $mod+7 workspace 7:MISC
-bindsym $mod+8 workspace 8:CHATS
-bindsym $mod+9 workspace 9:MISC
-bindsym $mod+0 workspace 10:MISC
+bindsym $mod+1 workspace 1:terminal
+bindsym $mod+2 workspace 2:editor
+bindsym $mod+3 workspace 3:browser
+bindsym $mod+4 workspace 4:files
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8:qbit
+bindsym $mod+9 workspace 9:keepAss
+#bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1:Terminal
-bindsym $mod+Shift+2 move container to workspace number 2:Editor
-bindsym $mod+Shift+3 move container to workspace number 3:Browser
-bindsym $mod+Shift+4 move container to workspace number 4:Files
-bindsym $mod+Shift+5 move container to workspace number 5:Docs
-bindsym $mod+Shift+6 move container to workspace number 6:Docs
-bindsym $mod+Shift+7 move container to workspace number 7:MISC
-bindsym $mod+Shift+8 move container to workspace number 8:MISC
-bindsym $mod+Shift+9 move container to workspace number 9:MISC
-bindsym $mod+Shift+0 move container to workspace number 10:MISC
+bindsym $mod+Shift+1 move container to workspace number 1:terminal
+bindsym $mod+Shift+2 move container to workspace number 2:editor
+bindsym $mod+Shift+3 move container to workspace number 3:browser
+bindsym $mod+Shift+4 move container to workspace number 4:files
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8:qbit
+bindsym $mod+Shift+9 move container to workspace number 9:keepAss
+#bindsym $mod+Shift+0 move container to workspace number 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
+bindsym $mod+Shift+Delete exec xsecurelock 
 
-bindsym $mod+Shift+Delete exit  
 #status bar, colors and position
 bar {
         status_command i3status
-        position bottom
+        position bottom 
     colors { 
 
         background #000000
@@ -143,20 +146,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #set the window borders type and size
-default_border pixel 1
-
-
-#configure px space between windows screen edges.
-#gaps inner 0px
-#gaps outer 0px
+default_border pixel 2
 
 #application rules, programs forced to use a certain workspace according to window class, use xprop to find the class.
 assign [class=LibreWolf] $workspace3
-assign [class=vscodium] $workspace2
+assign [class=VSCodium] $workspace2
 assign [class=Pcmanfm] $workspace4
-assign [class=libreoffice] $workspace5
-assign [class=libreoffice-writer] $workspace5
+assign [class=qBittorrent] $workspace8
+assign [class=KeePassXC] $workspace9
+
+#border options for different windows
 for_window [class=kitty] border none
+for_window [class=LibreWolf] border none
+for_window [class=VSCodium] border none
+for_window [class=firefox-esr] border none
+
 
 #dmenu launcher 
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -168,30 +172,26 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+S exec flameshot launcher
 
 #launch on startup
-exec_always autotiling
 exec librewolf
-exec pcmanfm
 exec kitty 
-exec xban
 exec xbanish
-exec fcitx5
+exec codium
+exec pcmanfm
+exec xinput disable 'Synaptics TM3075-002' 
 
 #kill process
 bindsym $mod+Shift+q kill
 
 #used software: -------------------------------------------
-
-#lxappereance - theme switcher
-#fcitx5, fcitx5-gtk, fcitx5-rime, fcitx5-qt, fcitx5-configtool, fcitx5-lua - language chooser and dependencies
 #flameshot - screenshot tool
 #pcmanfm - file manager
 #file-roller - compatible archiver with pcmanfm
 #vscodium - FOSS fork of VSCode 
 #librewolf - privacy fork of firefox
 #vim - the OG Text editor
-#git - github
+#git  
 #libreoffice - FOSS alternative of Microsoft Office
-#dmenu - application launcher for i3ng
+#dmenu - application launcher for i3-wm
 #xbanish  - hides the cursor on key press
 #xprop - find info on any window
 #bluetuith - terminal bluetooth client
@@ -201,4 +201,4 @@ bindsym $mod+Shift+q kill
 #xdg-user-dirs - configure user dirs, run xdg-user-dirs-update
 #nodejs - JavaScript runtime environment
 #ufw - firewall
-
+#nmcli - terminal network manager

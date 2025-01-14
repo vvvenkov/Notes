@@ -1,0 +1,18 @@
+
+wnload the AppImage: Ensure you have the AppImage file downloaded to your system. For example, if the AppImage is called example.AppImage, make sure you know its location.
+
+Open a terminal: Navigate to the directory where the AppImage is located, or use the absolute path.
+
+cd /path/to/your/appimage
+
+Make the AppImage executable: Use the chmod command to make the AppImage file executable. Run the following command in the terminal:
+
+chmod +x example.AppImage
+
+Replace example.AppImage with the actual name of the AppImage file.
+
+Run the AppImage: After setting the executable permission, you can run the AppImage directly from the terminal like this:
+
+./example.AppImage
+
+Alternatively, you can also double-click the AppImage in your file manager to launch it, assuming your file manager supports execution of AppImage files.
